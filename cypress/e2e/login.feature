@@ -5,6 +5,7 @@ Feature: Login/Register
     *As an existing user I want to be able to do a forgotten password*
     *As a user with facebook account I want to be able to sign in to energy voice facebook page*
     *As a user with google account I want to be able to sign in to energy voice google*
+    
   Background:
     *As an existing user I want to be able to login to energy voice page*
 
