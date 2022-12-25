@@ -1,0 +1,9 @@
+{
+  "selector": {
+    "LOGIN_TEXT": "#menu-item-211530 > a",
+    "LOGINPAGE_TITLE": ".title",
+    "EMAIL_FIELD": "#login_email",
+    "PASSWORD_FIELD": "#login_pass",
+    "LOGIN_BUTTON": ".blaize-form-login > .blaize-validators > .blaize-submit"
+  }
+}
