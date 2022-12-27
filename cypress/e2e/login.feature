@@ -5,7 +5,7 @@ Feature: Login/Register
     *As an existing user I want to be able to do a forgotten password*
     *As a user with facebook account I want to be able to sign in to energy voice facebook page*
     *As a user with google account I want to be able to sign in to energy voice google*
-    
+
   Background:
     *As an existing user I want to be able to login to energy voice page*
 
@@ -13,17 +13,20 @@ Feature: Login/Register
     When User clicks on login
 
   Scenario: login/register
-
     Then User lands on loginpage
 
-# Scenario: login as an existing user
-#   Given User is on EV page
-#   When User clicks on login
-#   And User enter email address
-#   And User enter password address
-#   And User clicks on login button
-#   Then User should be logged in to energy voice page
+  Scenario Outline: login as an existing user
+    And User enter <email> address
+    And User enter <password> address
+    And User clicks on login button
+    Then User should be logged in to energy voice page
 
+      | email                     | password    |
+      | elvie.bins@gmail.com      | Password278 |
+      | catherine.rau@hotmail.com | Password128 |
+      | joe.bins@gmail.com        | Password126 |
+      | joe.rau@hotmail.com       | Password124 |
+      | eileen76@yahoo.com        | Password123 |
 # Scenario: login with facebook credential(email address)
 #   Given User is on EV page
 #   When User clicks on login
