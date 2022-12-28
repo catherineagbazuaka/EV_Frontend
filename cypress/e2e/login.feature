@@ -16,21 +16,26 @@ Feature: Login/Register
     Then User lands on loginpage
 
   Scenario Outline: login as an existing user
-    And User enter <email> address
-    And User enter <password> address
-    And User clicks on login button
-    Then User should be logged in to energy voice page
-
+    And User enter
       | email                     | password    |
       | elvie.bins@gmail.com      | Password278 |
       | catherine.rau@hotmail.com | Password128 |
       | joe.bins@gmail.com        | Password126 |
       | joe.rau@hotmail.com       | Password124 |
       | eileen76@yahoo.com        | Password123 |
-# Scenario: login with facebook credential(email address)
-#   Given User is on EV page
-#   When User clicks on login
-#   And User clicks on sign in with facebook
+    And User clicks on login button
+    Then User should be logged in to energy voice page
+
+  Scenario Outline: login as an existing user, invalid email or password
+    And User enters
+      | invalidemail              | invalidpassword |
+      | elvie.bins@gmail.com1     | Password278     |
+      | catherine.rau@hotmail.com | Password12800   |
+    And User clicks on login button
+    And User is unable to be logged in
+
+ Scenario: login with facebook credential(email address)
+  And User clicks on sign in with facebook
 #   Then User enters facebook email address
 #   Then User enters facebook password
 #   Then User clicks on facebook login button
