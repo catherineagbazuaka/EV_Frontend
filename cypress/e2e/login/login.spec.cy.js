@@ -31,6 +31,7 @@ Then('User enters',(datatable)=>{
     cy.get("#login_email").type(element.invalidemail)
     cy.get("#login_pass").clear();
     cy.get("#login_pass").type(element.invalidpassword)
+    cy.clearCookies()
   })
 })
 Then('User is unable to be logged in',()=>{
