@@ -28,14 +28,14 @@ Feature: Login/Register
 
   Scenario Outline: login as an existing user, invalid email or password
     And User enters
-      | invalidemail              | invalidpassword |
-      | elvie.bins@gmail.com1     | Password278     |
-      | catherine.rau@hotmail.com | Password12800   |
+      | invalidemail                | invalidpassword |
+      | elvie.bins@gmail.com1       | Password278     |
+      | catherine.rau@hotmail89.com | Password12800   |
     And User clicks on login button
     And User is unable to be logged in
 
- Scenario: login with facebook credential(email address)
-  And User clicks on sign in with facebook
+  Scenario: login with facebook credential(email address)
+    And User clicks on sign in with facebook
 #   Then User enters facebook email address
 #   Then User enters facebook password
 #   Then User clicks on facebook login button
