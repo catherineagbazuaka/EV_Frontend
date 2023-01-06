@@ -36,28 +36,24 @@ Feature: Login/Register
 
   Scenario: login with facebook credential(email address)
     And User clicks on sign in with facebook
-#   Then User enters facebook email address
-#   Then User enters facebook password
-#   Then User clicks on facebook login button
-#   Then User should be logged in to energy voice facebook page
+    Then User enters facebook email address
+    Then User enters facebook password
+    Then User clicks on facebook login button
+    Then User should be logged in to energy voice facebook page
 
-# Scenario: login with google credential
-#   Given User is on EV page
-#   When User clicks on login
-#   Then User clicks on sign in with google
-#   Then User enters google email address
-#   Then User enters google password
-#   Then User clicks on google login button
+  Scenario: login with google credential
+    Then User clicks on sign in with google
+    Then User enters google email address
+    Then User enters google password
+    Then User clicks on google login button
 
-# Scenario: Register new user
-# Given User is on EV page
-# When User clicks on login
-# Then User clicks on 'click here to register'
-# Then User should be in 'Register' page
-# Then User enters email address register page
-# Then User enters password on register page
-# Then User clicks on Register button
-# Then User should be in 'Register' page
+  Scenario: Register new user
+    Then User clicks on 'click here to register'
+    Then User should be in 'Register' page
+    Then User enters email address register page
+    Then User enters password on register page
+    Then User clicks on Register button
+   
 
 
 
