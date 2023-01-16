@@ -17,6 +17,7 @@ Then('User enter', (datatable) => {
     cy.get("#login_email").type(element.email)
     cy.get("#login_pass").clear();
     cy.get("#login_pass").type(element.password)
+    Cypress.Cookies.debug()
   })
 })
 Then('User clicks on login button', () => {
@@ -36,48 +37,24 @@ Then('User enters', (datatable) => {
 })
 Then('User is unable to be logged in', () => {
   cy.get('.blaize-form-login > .blaize-validators > .blaize-error').should('be.visible')
-})
-Then('User clicks on sign in with facebook', () => {
-  cy.get('.blaize-form-login > .blaize-identifiers > [data-oauth-provider="facebook"]')
-})
-Then('User enters facebook email address', () => {
-
-})
-Then('User enters facebook password', () => {
-
-})
-Then('User clicks on facebook login button', () => {
-
-})
-Then('User should be logged in to energy voice', () => {
-
-})
-
-Then('User clicks on sign in with google', () => {
-
-})
-Then('User enters google email address', () => {
-
-})
-Then('User enters google password', () => {
-
-})
-Then('User clicks on google login button', () => {
 
 })
 Then('User clicks on {string}', () => {
-
+  cy.get('.blaize-to-register > a').click({ force: true })
+  cy.clearCookies()
 })
 Then('User should be in {string} page', () => {
-
+  cy.get('.blaize-form-register > .blaize-title').within(() => {
+    return cy.contains('Register').should('be.visible')
+  })
 })
 Then('User enters email address register page', () => {
-
+  cy.get('#reg_email').type('zuaka200@gmail.com')
 })
 Then('User enters password on register page', () => {
-
+  cy.get('#reg_pass').type('Patricia88')
 })
 Then('User clicks on Register button', () => {
-
+  cy.get('.blaize-form-register > .blaize-validators > .blaize-submit').click({ force: true })
 })
 

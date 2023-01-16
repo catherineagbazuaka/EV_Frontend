@@ -6,59 +6,31 @@
 //     "cucumberautocomplete.strictGherkinCompletion": true
 // }
 {
-
     "cucumberautocomplete.steps": [
-
         "cypress/**/**/*.js"
-
     ],
-
     "cucumberautocomplete.syncfeatures": "/cypress/**/*/*.feature",
-
-    "cucumberautocomplete.strictGherkinCompletion": true,
-
+    "cucumberautocomplete.strictGherkinCompletion": false,
     "cucumberautocomplete.strictGherkinValidation": true,
-
     "cucumberautocomplete.smartSnippets": true,
-
     "cucumberautocomplete.stepsInvariants": true,
-
     "cucumberautocomplete.customParameters": [
-
         {
-
             "parameter": "{ab}",
-
             "value": "(a|b)"
-
         }
-
     ],
-
     "cucumberautocomplete.skipDocStringsFormat": true,
-
     "cucumberautocomplete.formatConfOverride": {
-
         "And": 3,
-
         "But": "relative"
-
     },
-
     "cucumberautocomplete.onTypeFormat": true,
-
     "editor.quickSuggestions": {
-
         "comments": false,
-
         "strings": true,
-
         "other": true
-
     },
-
     "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then)\\(",
-
     "cucumberautocomplete.stepRegExSymbol": "'"
-
 }

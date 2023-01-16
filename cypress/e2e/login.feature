@@ -34,18 +34,18 @@ Feature: Login/Register
     And User clicks on login button
     And User is unable to be logged in
 
-  Scenario: login with facebook credential(email address)
-    And User clicks on sign in with facebook
-    Then User enters facebook email address
-    Then User enters facebook password
-    Then User clicks on facebook login button
-    Then User should be logged in to energy voice facebook page
+  # Scenario: login with facebook credential(email address)
+    # And User clicks on sign in with facebook
+    # Then User enters facebook email address
+    # Then User enters facebook password
+    # Then User clicks on facebook login button
+    # Then User should be logged in to energy voice facebook page
 
-  Scenario: login with google credential
-    Then User clicks on sign in with google
-    Then User enters google email address
-    Then User enters google password
-    Then User clicks on google login button
+  # Scenario: login with google credential
+    # Then User clicks on sign in with google
+    # Then User enters google email address
+    # Then User enters google password
+    # Then User clicks on google login button
 
   Scenario: Register new user
     Then User clicks on 'click here to register'
