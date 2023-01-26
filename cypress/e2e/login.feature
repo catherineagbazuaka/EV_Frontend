@@ -1,3 +1,4 @@
+# */* Author-Chidinma Agbazuaka */
 Feature: Login/Register
 
     *As an existing user I want to be able to login to energy voice page*
@@ -10,50 +11,40 @@ Feature: Login/Register
     *As an existing user I want to be able to login to energy voice page*
 
     Given User is on EV page
-    When User clicks on login
+    When User clicks on loginRegister text
 
   Scenario: login/register
     Then User lands on loginpage
 
   Scenario Outline: login as an existing user
-    And User enter
-      | email                     | password    |
-      | elvie.bins@gmail.com      | Password278 |
-      | catherine.rau@hotmail.com | Password128 |
-      | joe.bins@gmail.com        | Password126 |
-      | joe.rau@hotmail.com       | Password124 |
-      | eileen76@yahoo.com        | Password123 |
-    And User clicks on login button
+    And User enter valid email '<email>'
+    And User enter valid password '<password>'
+    Then User clicks on login button
     Then User should be logged in to energy voice page
+    Examples:
+      | email                              | password      |
+      | catherine.chidinma@dcthomson.co.uk | Marshmallow12 |
 
   Scenario Outline: login as an existing user, invalid email or password
-    And User enters
-      | invalidemail                | invalidpassword |
-      | elvie.bins@gmail.com1       | Password278     |
-      | catherine.rau@hotmail89.com | Password12800   |
-    And User clicks on login button
+    And User enters invalid email '<invalidemail>'
+    And User enters invalid password '<invalidpassword>'
+    And User clicks on login
     And User is unable to be logged in
+    Examples:
+      | invalidemail                 | invalidpassword |
+      | elvie.bins@gmail.com1**      | Password278     |
+      | catherine.rau@hotmail89.com@ | Password12800   |
 
-  # Scenario: login with facebook credential(email address)
-    # And User clicks on sign in with facebook
-    # Then User enters facebook email address
-    # Then User enters facebook password
-    # Then User clicks on facebook login button
-    # Then User should be logged in to energy voice facebook page
+# Scenario: Register new user
+# Then User clicks on 'click here to register'
+# Then User should be in 'Register' page
 
-  # Scenario: login with google credential
-    # Then User clicks on sign in with google
-    # Then User enters google email address
-    # Then User enters google password
-    # Then User clicks on google login button
+# Scenario: Signin with facebook account
+# Then facebook is visible and clickable
 
-  Scenario: Register new user
-    Then User clicks on 'click here to register'
-    Then User should be in 'Register' page
-    Then User enters email address register page
-    Then User enters password on register page
-    Then User clicks on Register button
-   
+# Scenario: Signin with google account
+# Then google is visible and clickable
+
 
 
 

@@ -1,0 +1,6 @@
+{
+    "paths": {
+        "EV": "https://www.energyvoice.com",
+        "LOGIN": "/login"
+        }
+}

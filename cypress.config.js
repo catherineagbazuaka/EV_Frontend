@@ -36,6 +36,8 @@ e2e: {
     baseUrl: 'https://www.energyvoice.com/',
     specPattern: '**/*.feature',
     supportFile: 'cypress/support/e2e.js',
+    excludeSpecPattern: ['*.js', '*.md'],
+    chromeWebSecurity:false,
     projectId: "ikapjg",
     setupNodeEvents
   }

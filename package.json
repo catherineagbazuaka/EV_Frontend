@@ -6,12 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:run": "cypress run"
-  
   },
   "author": "catherine",
   "license": "ISC",
   "devDependencies": {
     "cypress-fill-command": "^1.0.2",
+    "cypress-wait-until": "^1.7.2",
     "start-server-and-test": "^1.15.2"
   },
   "dependencies": {

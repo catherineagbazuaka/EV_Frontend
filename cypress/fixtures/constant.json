@@ -6,6 +6,29 @@
     "PASSWORD_FIELD": "#login_pass",
     "LOGIN_BUTTON": ".blaize-form-login > .blaize-validators > .blaize-submit",
     "LOGIN_EMAIL": "#login_email",
-    "LOGIN_PASS": "#login_pass"
+    "LOGIN_PASS": "#login_pass",
+    "UNORDER": "body > header > div > nav > nav > ul",
+    "BLOCK": "div.wrap",
+    "NEWSLETTER_SIGNUP": "#menu-item-195987",
+    "ADVERTISE": "#menu-item-240714",
+    "SOCIAL": "span.screen-reader-text",
+    "HEADER": ".site-header > .wrap",
+    "ENERGYVOICE_LOGO": "svg.logo__media",
+    "HAMBURGER": "nav[role='navigation'] > .-border-box.-hide-nojs.-hide-print.all-sections-btn",
+    "OIL&GAS":"#menu-item-195967",
+    "RENEWABLES/ENERGY TRANSITION":"#menu-item-205697",
+    "MARKET":"#menu-item-343009",
+    "OPINION":"#menu-item-195985",
+    "PODCAST": "#menu-item-235966",
+    "SUBCRIBE":"#menu-item-214374",
+    "AFRICA":"menu-item-195968",
+    "AMERICA":"menu-item-195969",
+    "ASIA":"menu-item-195970",
+    "AUSTRALIA":"menu-item-195971",
+    "EUROPE":"#menu-item-195972",
+    "MIDDLEEAST":"#menu-item-195973",
+    "NORTHSEA":"#menu-item-195974",
+    "NORWAY":"#menu-item-207877"
+
   }
 }
