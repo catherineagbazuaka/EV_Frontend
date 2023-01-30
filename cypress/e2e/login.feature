@@ -12,10 +12,10 @@ Feature: Login/Register
 
     Given User is on EV page
     When User clicks on loginRegister text
-
+@prod
   Scenario: login/register
     Then User lands on loginpage
-
+@prod
   Scenario Outline: login as an existing user
     And User enter valid email '<email>'
     And User enter valid password '<password>'
@@ -24,7 +24,7 @@ Feature: Login/Register
     Examples:
       | email                              | password      |
       | catherine.chidinma@dcthomson.co.uk | Marshmallow12 |
-
+@prod
   Scenario Outline: login as an existing user, invalid email or password
     And User enters invalid email '<invalidemail>'
     And User enters invalid password '<invalidpassword>'
@@ -34,16 +34,16 @@ Feature: Login/Register
       | invalidemail                 | invalidpassword |
       | elvie.bins@gmail.com1**      | Password278     |
       | catherine.rau@hotmail89.com@ | Password12800   |
-
-# Scenario: Register new user
-# Then User clicks on 'click here to register'
-# Then User should be in 'Register' page
-
-# Scenario: Signin with facebook account
-# Then facebook is visible and clickable
-
-# Scenario: Signin with google account
-# Then google is visible and clickable
+@prod
+  Scenario: Register new user
+    Then User clicks on 'click here to register'
+    Then User should be in 'Register' page
+@prod
+  Scenario: Signin with facebook account
+    Then facebook is visible and clickable
+@prod
+  Scenario: Signin with google account
+    Then google is visible and clickable
 
 
 

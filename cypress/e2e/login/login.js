@@ -13,9 +13,17 @@ export class LoginPage {
     get validPass() {
         return cy.get(selector.LOGIN_PASS)
     }
-    getLoginButton(){
+    get loginButton() {
         return cy.get(selector.LOGIN_BUTTON)
-        
+    }
+    get header() {
+        return cy.get(selector.HEADER)
+    }
+    get invalidLoginHeader() {
+        return cy.get(selector.INVALIDLOGINHEADER)
+    }
+    get registerLink() {
+        return cy.get(selector.REGISTERLINK)
     }
     verifyClickLoginText() {
         this.clickLoginText.should('exist')
@@ -24,19 +32,47 @@ export class LoginPage {
         this.loginTitle.should('be.visible');
         cy.title().should('exist');
     }
-    visitPage() { 
+    visitPage() {
+
     }
-    verifyValidEmail(){
+    verifyValidEmail() {
         this.validEmail
         this.validEmail.should('exist')
     }
-    verifyValidPass(){
+    verifyValidPass() {
         this.validPass
         this.validPass.should('exist')
     }
-    verifyLoginButton(){
-        this.loginButton
-       
+    verifyLoginButton() {
+        this.loginButton.click({ force: true })
+    }
+    verifyHeader() {
+        this.header.should('be.visible')
+    }
+    verifyInvalidLoginHeader() {
+        this.invalidLoginHeader.should('contain', 'Login')
+    }
+    verifyRegisterLink() {
+        this.registerLink.click({ force: true })
+    }
+    validateRegisterLink() {
+        this.registerLink.within(() => {
+            return cy.contains('Register').should('be.visible')
+        });
+    }
+    validateGoogleLink() {
+        cy.get(selector.GOOGLELINK)
+            .scrollIntoView
+            .should('exist')
+            .contains('Sign in with Google')
+            .click()
+    }
+    validateFacebookLink() {
+        cy.get(selector.FACEBOOKLINK)
+            .scrollIntoView()
+            .should('exist')
+            .contains('Sign in with Facebook')
+            .click()
     }
 
 }

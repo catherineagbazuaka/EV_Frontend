@@ -1,13 +1,7 @@
-// {
-//     "cucumberautocomplete.steps": [
-//         "test/features/step_definitions/*.js",
-//         "node_modules/qa-lib/src/step_definitions/*.js"
-//     ],
-//     "cucumberautocomplete.strictGherkinCompletion": true
-// }
 {
     "cucumberautocomplete.steps": [
-        "cypress/**/**/*.js"
+        "cypress/**/**/*.js",
+        "cypress/**/*cy.spec.js"
     ],
     "cucumberautocomplete.syncfeatures": "/cypress/**/*/*.feature",
     "cucumberautocomplete.strictGherkinCompletion": false,
@@ -27,10 +21,10 @@
     },
     "cucumberautocomplete.onTypeFormat": true,
     "editor.quickSuggestions": {
-        "comments": false,
+        "comments": true,
         "strings": true,
         "other": true
     },
-    "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then)\\(",
+    "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then|And)\\(",
     "cucumberautocomplete.stepRegExSymbol": "'"
 }
