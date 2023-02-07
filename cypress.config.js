@@ -32,13 +32,17 @@ async function setupNodeEvents(on, config) {
   return config;
 }
 module.exports = defineConfig({
+  projectId: 'ikapjg',
 e2e: {
     baseUrl: 'https://www.energyvoice.com/',
     specPattern: '**/*.feature',
     supportFile: 'cypress/support/e2e.js',
     excludeSpecPattern: ['*.js', '*.md'],
     chromeWebSecurity:false,
-    projectId: "ikapjg",
+    viewportHeight:900,
+    viewportWidth:1400,
+    watchForFileChanges:true,
+    defaultCommandTimeout:15000,
     setupNodeEvents
   }
   

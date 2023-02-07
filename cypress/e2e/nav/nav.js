@@ -6,18 +6,18 @@ const pages = [
     'Markets',
     'Opinion',
     'Podcast',
-    // 'Subscribe',
-    // 'Nuclear',
-    // 'Wind',
-    // 'Solar',
-    // 'Wave & Tidal',
-    // 'Hydro',
-    // 'Hydrogen',
-    // 'CCS',
-    // 'Biofuels',
-    // 'Grids & Retail',
-    // 'Storage',
-    // 'Transport'
+    'Subscribe',
+    'Nuclear',
+    'Wind',
+    'Solar',
+    'Wave & Tidal',
+    'Hydro',
+    'Hydrogen',
+    'CCS',
+    'Biofuels',
+    'Grid & Retail',
+    'Storage',
+    'Transport'
 ]
 export class NavRole {
     get header() {

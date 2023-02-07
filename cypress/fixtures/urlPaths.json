@@ -1,7 +1,8 @@
 {
     "paths": {
         "EV": "https://www.energyvoice.com",
-        "LOGIN": "/login"
+        "LOGIN": "/login",
+       "PODCAST":" a[href='https://www.energyvoice.com/category/podcast/']"
         
         }
 }

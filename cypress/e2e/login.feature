@@ -10,7 +10,6 @@ Feature: Login/Register
   Background:
     *As an existing user I want to be able to login to energy voice page*
 
-    Given User is on EV page
     When User clicks on loginRegister text
 @prod
   Scenario: login/register

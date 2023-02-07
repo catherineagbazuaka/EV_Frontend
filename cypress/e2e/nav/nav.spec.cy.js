@@ -1,10 +1,6 @@
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import { loginPage } from "../login/login";
+import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import { navRole } from "../nav/nav";
 
-Given('User is on EV page', () => {
-    loginPage.visitPage()
-});
 When('User check for header banner', () => {
     navRole.verifyHeader()
 });
@@ -32,7 +28,7 @@ Then('User clicks on {string} category on the nav bar', (text) => {
 Then('User is on {string} page', (page) => {
     navRole.checkLinks(page)
 })
-When('The User clicks on {string} category on the nav bar', (text) => {
+Then('The User clicks on {string} category on the nav bar', (text) => {
     cy.get('#menu-item-205697 > [href="https://www.energyvoice.com/category/renewables-energy-transition/"]').then(($el) => {
         cy.wrap($el).invoke('text').should('contain', text)
         cy.wrap($el).click()
@@ -41,7 +37,7 @@ When('The User clicks on {string} category on the nav bar', (text) => {
 Then('The User is on {string} page', (page) => {
     navRole.checkLinks(page)
 })
-When('User click on {string} category on the nav bar', (text) => {
+Then('User click on {string} category on the nav bar', (text) => {
     cy.get('#menu-item-343009> [href="https://www.energyvoice.com/category/markets/"]').then(($el) => {
         cy.wrap($el).invoke('text').should('contain', text)
         cy.wrap($el).click()
@@ -50,7 +46,7 @@ When('User click on {string} category on the nav bar', (text) => {
 Then('User lands on {string} page', (page) => {
     navRole.checkLinks(page)
 })
-When('User now clicks on {string} category on the nav bar', (text) => {
+Then('User now clicks on {string} category on the nav bar', (text) => {
     cy.get('#menu-item-195985> [href="https://www.energyvoice.com/category/opinion/"]').then(($el) => {
         cy.wrap($el).invoke('text').should('contain', text)
         cy.wrap($el).click()
@@ -59,16 +55,14 @@ When('User now clicks on {string} category on the nav bar', (text) => {
 Then('User is now on {string} page', (page) => {
     navRole.checkLinks(page)
 })
-Then('User clicks on {string} category',(text)=>{
-    cy.get('#menu-item-235966> [href="https://www.energyvoice.com/category/podcast/"]').then(($el) => {
-        cy.wrap($el).invoke('text').should('contain', text)
-        cy.wrap($el).click()
-    })
+Then('User clicks on {string} category', (text) => {
+    cy.get(`${text}`).eq(0).click()
 })
-Then('User on {string} page',(page)=>{
+Then('User on {string} page', (page) => {
     navRole.checkLinks(page)
 })
 
-
-
-
+// Then('User clicks on {string} on the page', () => {
+    // cy.get('#menu-item-205697').click()
+// })
+// 
