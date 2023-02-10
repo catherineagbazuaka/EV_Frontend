@@ -11,3 +11,10 @@ Feature: Footer component
     Then User submit Login
     Then User should be able to view footer navigations
     Then User should be able to click on all categories on the Footer
+
+  Scenario: check href attribute on all categories on the Footer has a logged out user
+    When user is logged in
+
+  Scenario: check href attribute on all categories on the Footer has a logged in user
+    When user is logged out
+

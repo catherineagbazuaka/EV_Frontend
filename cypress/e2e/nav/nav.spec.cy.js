@@ -1,5 +1,6 @@
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import { navRole } from "../nav/nav";
+import 'chai/register-expect'
 
 When('User check for header banner', () => {
     navRole.verifyHeader()
@@ -61,8 +62,21 @@ Then('User clicks on {string} category', (text) => {
 Then('User on {string} page', (page) => {
     navRole.checkLinks(page)
 })
+Then('User views submenus',()=>{
+    cy.get('#menu-item-195967 > ul').should('contain.text', 'Norway')
+    
+})
+Then('User clicks on submenus',()=>{
+    cy.get('#menu-item-195968 > a')
+  .within(() => {
+    cy.contains('Africa').click({force:true})
+    cy.url().should('include','/oilandgas/africa/')
+    })
+    cy.get('#menu-item-195969 > a')
+    .within(()=>{
+        cy.contains('America').click({force:true})
+        cy.url().should('include','/oilandgas/america')
+    })
+    })
+    
 
-// Then('User clicks on {string} on the page', () => {
-    // cy.get('#menu-item-205697').click()
-// })
-// 

@@ -39,6 +39,7 @@ e2e: {
     supportFile: 'cypress/support/e2e.js',
     excludeSpecPattern: ['*.js', '*.md'],
     chromeWebSecurity:false,
+    projectId: "ikapjg",
     viewportHeight:900,
     viewportWidth:1400,
     watchForFileChanges:true,
@@ -47,3 +48,6 @@ e2e: {
   }
   
 })
+
+
+
