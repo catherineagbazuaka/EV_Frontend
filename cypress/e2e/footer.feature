@@ -14,6 +14,8 @@ Feature: Footer component
 
   Scenario: check href attribute on all categories on the Footer has a logged out user
     When user is logged in
+    Then User clicks on the 'Pressin Journal' on the footer
+    Then User check that Header Div loads correctly
 
   Scenario: check href attribute on all categories on the Footer has a logged in user
     When user is logged out
