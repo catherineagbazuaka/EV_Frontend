@@ -33,7 +33,6 @@ export class LoginPage {
         cy.title().should('exist');
     }
     visitPage() {
-
     }
     verifyValidEmail() {
         this.validEmail

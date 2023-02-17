@@ -1,6 +1,6 @@
 # */* Author-Chidinma Agbazuaka */
 Feature: Login/Register
-
+As a user of the Energy Voice website I want to login:
     *As an existing user I want to be able to login to energy voice page*
     *As a new user I want to be able to register to energy voice*
     *As an existing user I want to be able to do a forgotten password*
@@ -12,10 +12,10 @@ Feature: Login/Register
 
     When User clicks on loginRegister text
 @prod
-  Scenario: login/register
+  Scenario: User login/register
     Then User lands on loginpage
 @prod
-  Scenario Outline: login as an existing user
+  Scenario Outline: User logs in as an existing user
     And User enter valid email '<email>'
     And User enter valid password '<password>'
     Then User clicks on login button
@@ -24,7 +24,7 @@ Feature: Login/Register
       | email                              | password      |
       | catherine.chidinma@dcthomson.co.uk | Marshmallow12 |
 @prod
-  Scenario Outline: login as an existing user, invalid email or password
+  Scenario Outline: User logs in as an existing user, invalid email or password
     And User enters invalid email '<invalidemail>'
     And User enters invalid password '<invalidpassword>'
     And User clicks on login
@@ -34,14 +34,14 @@ Feature: Login/Register
       | elvie.bins@gmail.com1**      | Password278     |
       | catherine.rau@hotmail89.com@ | Password12800   |
 @prod
-  Scenario: Register new user
+  Scenario:Register new user
     Then User clicks on 'click here to register'
     Then User should be in 'Register' page
 @prod
-  Scenario: Signin with facebook account
+  Scenario: Signs in with a facebook account
     Then facebook is visible and clickable
 @prod
-  Scenario: Signin with google account
+  Scenario: Signs in with a google account
     Then google is visible and clickable
 
 

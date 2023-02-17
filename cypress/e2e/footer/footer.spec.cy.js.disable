@@ -1,0 +1,24 @@
+import { When, Then } from "@badeball/cypress-cucumber-preprocessor"
+
+// When('User clicks on {string}', ()=> {
+
+
+// })
+// And ('User clicks enters {string} and {string}',()=> {
+
+// })
+// Then('User submit Login',()=> {
+// })
+// Then("User should be able to view footer navigations with the correct links",()=> {
+    // cy.get('')
+    // .find('a')
+    // .should('have.lenght', 14)
+    // .should('contain', 'Contact')
+    // .should('contain','Terms and conditions')
+    // .should('contain','Cookie Policy')
+    // .should('contain', 'Sustainable Growth Voice')
+    // .should('contain','Privacy Policy')
+// })
+// Then('User should be able to click on all categories on the Footer',()=> {
+
+// })

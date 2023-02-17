@@ -1,5 +1,6 @@
 import { loginPage } from "./login";
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor"
+
 When('User clicks on loginRegister text', () => {
   loginPage.clickLoginText.click({ force: true });
   loginPage.verifyClickLoginText();

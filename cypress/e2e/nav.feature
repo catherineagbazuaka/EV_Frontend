@@ -1,9 +1,9 @@
 # */* Author-Chidinma Agbazuaka */#
 Feature: Nav role
+As an annonymous user and existing user of the Energy Voice website,
+ I want to be able to click on all category on the nav bar
 
-        *As an existing user I want to able to click on all category on the nav bar
-
-    Scenario: verify user is on header banner
+    Scenario: I want to verify user is on header banner
         When User check for header banner
         Then User check Newsletter signup is present
         And User check Advertiser signup is present
@@ -11,27 +11,27 @@ Feature: Nav role
         And User check logo exists
         And User check Hamburger menu is present
 
-    Scenario:verify Oil&Gas category
+    Scenario: I want to verify Oil&Gas category
         When User clicks on 'Oil & Gas' category on the nav bar
         Then User is on 'Oil & Gas' page
 
-    Scenario:verify renewables/energytransition category
+    Scenario: I want to verify renewables/energytransition category
         When The User clicks on 'Renewables/Energy Transition' category on the nav bar
         Then The User is on 'Renewables/Energy Transition' page
 
-    Scenario:verify markets category
+    Scenario: I want to verify markets category
         When User click on 'Market' category on the nav bar
         Then User lands on 'Market' page
 
-    Scenario:verify expert opinion category
+    Scenario: I want to verify expert opinion category
         When User now clicks on 'Opinion' category on the nav bar
         Then User is now on 'Opinion' page
 
-    Scenario:verify podcast category
+    Scenario: I want to verify podcast category
         When User clicks on 'a[href="https://www.energyvoice.com/category/podcast/"]' category
         Then User on 'Podcast' page
 
-        Scenario:verify submenus category
+        Scenario: I want to verify submenus category
          Then User should be able to view submenus
          Then User clicks on submenus under category
          Then User checks that Href Attribute exists
