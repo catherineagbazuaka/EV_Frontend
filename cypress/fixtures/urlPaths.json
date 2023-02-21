@@ -2,7 +2,8 @@
     "paths": {
         "EV": "https://www.energyvoice.com",
         "LOGIN": "/login",
-       "PODCAST":" a[href='https://www.energyvoice.com/category/podcast/']"
+       "PODCAST":" a[href='https://www.energyvoice.com/category/podcast/']",
+       "THE_SUNDAY_POST":"https://www.sundaypost.com/"
         
         }
 }

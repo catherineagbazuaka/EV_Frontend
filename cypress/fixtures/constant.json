@@ -35,7 +35,17 @@
     "EUROPE":"#menu-item-195972",
     "MIDDLEEAST":"#menu-item-195973",
     "NORTHSEA":"#menu-item-195974",
-    "NORWAY":"#menu-item-207877"
-
+    "NORWAY":"#menu-item-207877",
+    "FOOTER_DCT_LINK":"#menu-footer-dct-links",
+    "MORE_INFO":":nth-child(2) > .site-footer__title",
+    "FOOTER_NAV":"#menu-footer-navigation",
+    "THE_SUNDAY_POST":"#menu-item-442522",
+    "THE_COURIER":"#menu-item-442519",
+    "THE_PRESS_AND_JOURNAL":"#menu-item-442516",
+    "SGV":"#menu-item-442525",
+    "SUNDAYPOSTHEADER":"a[title='The Sunday Post']  svg[role='img']",
+    "username":"zuaka200@gmail.com",
+    "password":"Patricia88"
   }
+
 }

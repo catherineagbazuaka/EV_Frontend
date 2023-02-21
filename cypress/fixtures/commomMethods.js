@@ -32,7 +32,6 @@ export class CommonMethods{
                     cy.wrap(button).should('have.text','SUBSCRIBE')
                     } 
                 })
-        
         }
         validateLoginButtonText() {
             cy.get(selector.LOGIN_BUTTON)

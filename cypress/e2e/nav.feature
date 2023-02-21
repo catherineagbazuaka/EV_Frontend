@@ -14,7 +14,7 @@ As an annonymous user and existing user of the Energy Voice website,
     Scenario: I want to verify Oil&Gas category
         When User clicks on 'Oil & Gas' category on the nav bar
         Then User is on 'Oil & Gas' page
-
+        
     Scenario: I want to verify renewables/energytransition category
         When The User clicks on 'Renewables/Energy Transition' category on the nav bar
         Then The User is on 'Renewables/Energy Transition' page

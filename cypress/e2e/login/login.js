@@ -1,5 +1,16 @@
 import { selector } from '../../fixtures/constant.json'
 
+const pages = [
+    'Contact',
+    'Terms & Conditions',
+    'Cookie Policy',
+    'Sustainable Growth Voice',
+    'Privacy Policy',
+    'Cookie Preferences',
+    'The Press and Journal',
+    'The Sunday Post',
+    'SG Voice',
+];
 export class LoginPage {
     get clickLoginText() {
         return cy.get(selector.LOGIN_TEXT)
@@ -8,7 +19,7 @@ export class LoginPage {
         return cy.get(selector.LOGINPAGE_TITLE)
     }
     get validEmail() {
-        return cy.get(selector.LOGIN_EMAIL)
+        return cy.get(selector.LOGIN_EMAIL).type(email)
     }
     get validPass() {
         return cy.get(selector.LOGIN_PASS)
@@ -35,18 +46,18 @@ export class LoginPage {
     visitPage() {
     }
     verifyValidEmail() {
-        this.validEmail
         this.validEmail.should('exist')
     }
     verifyValidPass() {
-        this.validPass
         this.validPass.should('exist')
     }
     verifyLoginButton() {
-        this.loginButton.click({ force: true })
+        this.loginButton
+        .click({ force: true })
     }
     verifyHeader() {
         this.header.should('be.visible')
+        cy.contains('My Account').should('be.visible')
     }
     verifyInvalidLoginHeader() {
         this.invalidLoginHeader.should('contain', 'Login')
@@ -61,7 +72,7 @@ export class LoginPage {
     }
     validateGoogleLink() {
         cy.get(selector.GOOGLELINK)
-            .scrollIntoView
+            .scrollIntoView()
             .should('exist')
             .contains('Sign in with Google')
             .click()
@@ -73,6 +84,28 @@ export class LoginPage {
             .contains('Sign in with Facebook')
             .click()
     }
-
+    verifyNavlinksFooter(){
+        cy.get('ul').should('exist')
+        cy.get(selector.FOOTER_DCT_LINK).each(($els)=>{
+        cy.log($els.text())
+       })
+       cy.get(selector.MORE_INFO).each(($els)=>{
+       cy.log($els.text())
+       })
+       cy.get(selector.FOOTER_NAV).each(($els)=>{
+       cy.log($els.text())
+      })
+    }
+    validateFooterLinks(){
+    pages.forEach((page) =>{
+        cy.contains(page).then((link)=>{
+            cy.request(link.prop('href'))
+            cy.log(link.prop('href'))
+        })
+    })
+    }
+    validateUrl(expUrl) {
+        cy.url().should('include.value',expUrl)
+}
 }
 export const loginPage = new LoginPage
