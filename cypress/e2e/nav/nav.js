@@ -56,8 +56,7 @@ export class NavRole {
     }
     validateHamburgerMenu() {
         this.hamburgerMenu
-            .should('exist')
-
+           .should('exist')
     }
     checkLinks() {
         pages.forEach((page) => {
