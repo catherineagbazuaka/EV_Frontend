@@ -11,10 +11,10 @@ Feature: Login/Register
     *As an existing user I want to be able to login to energy voice page*
 
     When User clicks on loginRegister text
-@prod
+  @prod
   Scenario: login/register
     Then User lands on loginpage
-@prod
+  @prod
   Scenario Outline: login as an existing user
     And User enter valid email '<email>'
     And User enter valid password '<password>'
@@ -23,7 +23,7 @@ Feature: Login/Register
     Examples:
       | email                              | password      |
       | catherine.chidinma@dcthomson.co.uk | Marshmallow12 |
-@prod
+  @prod
   Scenario Outline: login as an existing user, invalid email or password
     And User enters invalid email '<invalidemail>'
     And User enters invalid password '<invalidpassword>'
@@ -33,14 +33,14 @@ Feature: Login/Register
       | invalidemail                 | invalidpassword |
       | elvie.bins@gmail.com1**      | Password278     |
       | catherine.rau@hotmail89.com@ | Password12800   |
-@prod
+  @prod
   Scenario: Register new user
     Then User clicks on 'click here to register'
     Then User should be in 'Register' page
-@prod
+  @prod
   Scenario: Signin with facebook account
     Then facebook is visible and clickable
-@prod
+  @prod
   Scenario: Signin with google account
     Then google is visible and clickable
 

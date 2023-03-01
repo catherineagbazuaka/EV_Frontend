@@ -32,7 +32,9 @@ async function setupNodeEvents(on, config) {
   return config;
 }
 module.exports = defineConfig({
+  // projectId: #'ikapjg'
   projectId: 'ikapjg',
+  
 e2e: {
     baseUrl: 'https://www.energyvoice.com/',
     specPattern: '**/*.feature',

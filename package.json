@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@currents/cli": "^4.0.3",
     "@cypress/webpack-preprocessor": "^5.15.7",
-    "cypress": "^12.1.0"
+    "cypress": "^12.6.0"
   }
 }
